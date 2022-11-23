@@ -15,8 +15,12 @@ programa
 		escreva("Qual a frase a ser criptografada? ")
 		leia(frase)
 
-		escreva("Qual a chave desejada?")
+		escreva("Qual a chave desejada? ")
 		leia(chave)
+
+		//criptografar(frase, chave)
+
+		descriptografar("cheud", 3)
 
 		
 	}
@@ -52,8 +56,34 @@ programa
 		
 	}
 
-	funcao descriptografar(){
-		//desafio
+	funcao descriptografar(cadeia frase,inteiro chave){
+
+		inteiro numeroLetras = t.numero_caracteres(frase)
+
+		escreva("a frase tem ", numeroLetras, " letras. \n")
+
+		para (inteiro i = 0 ; i < numeroLetras ; i++){
+
+			caracter letra = t.obter_caracter(frase, i)
+			cadeia letraConvertida = ti.caracter_para_cadeia(letra)
+
+
+			para(inteiro j = 0; j < 26 ; j++){
+				se( letraConvertida == alfabeto [j]){
+
+					inteiro novachave=j-chave
+
+					se(novachave < 0){
+						novachave = 26 + novachave
+					}
+					
+					escreva(alfabeto[novachave])
+				}
+			}
+			
+		}
+
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
