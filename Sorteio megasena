@@ -1,0 +1,94 @@
+programa
+{
+	inclua biblioteca Util
+ --> u
+	
+	funcao inicio()
+	{
+		menu()
+	}
+
+	funcao vazio menu(){
+		inteiro opcao = 1
+
+		
+
+		escreva("\n*************************\n")
+		escreva("1 -----> Mega sena \n")
+		escreva("2 -----> Quina \n")
+		escreva("3 -----> Lotomania \n")
+		escreva("4 -----> Lotofacil \n")
+		escreva("\n*************************\n")
+		escreva("\n_________________________\n")
+		
+			
+			escolha(opcao){
+			
+			caso 1 : mega_sena()
+			pare
+			
+			caso 2 : quina() 
+			pare
+
+			caso 3 : lotomania()
+			pare
+
+			caso 4 : lotofacil()
+			pare
+			
+			caso contrario : escreva("----------> opção invalida <----------")
+			pare
+		}
+
+		//menu()
+		
+		}
+	
+
+	
+	funcao mega_sena(){
+		
+		
+	
+		inteiro numero_sorteios = 3
+		
+		para(inteiro i=0; i < numero_sorteios; i++){
+
+			escreva("\n\nSorteio:" , i+1, " \n")
+			para(inteiro j=0; j < 6; j++){
+				escreva(u.sorteia(1, 60) , " - " )
+			}
+		}
+
+
+	}
+
+	funcao quina(){
+
+		para(inteiro i=0; i < 5; i++){
+			escreva(u.sorteia(1, 80) , " - " )
+			
+
+		}
+		
+		
+	}
+
+	funcao lotomania(){
+		para(inteiro i=0; i < 20; i++){
+			escreva(u.sorteia(00, 99) , " - " )
+
+		}
+		
+
+	}
+
+	funcao lotofacil(){
+		para(inteiro i=0; i < 20; i++){
+			escreva(u.sorteia(1, 25) , " - " )
+		}
+		
+		
+	}
+
+	}
